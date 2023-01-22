@@ -1,38 +1,20 @@
-.App {
-  text-align: center;
+/* dark theme */
+.dark {
+    background: rgb(23, 23, 23);
+    width: 100%;
+    color: white;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-dark{
+    background: rgb(30, 30, 30);
+    border: 1px solid rgb(50, 50, 50);
+    color: white;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.posts-dark, .users-dark{
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.body-dark{
+    color: rgb(207, 207, 207);
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mode-dark{
+   color: white;
 }
