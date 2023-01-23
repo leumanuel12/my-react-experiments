@@ -6,14 +6,17 @@
 }
 .navbar-dark{
     background: rgb(30, 30, 30);
-    border: 1px solid rgb(50, 50, 50);
     color: white;
+}
+.navbar-main.navbar-dark{
+    color: white;
+    border: 1px solid rgb(50, 50, 50);
 }
 .posts-dark, .users-dark{
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
 .body-dark{
-    color: rgb(207, 207, 207);
+    color: rgb(187, 187, 187);
 }
 .mode-dark{
    color: white;

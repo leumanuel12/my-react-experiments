@@ -12,7 +12,9 @@ export default function Header(props) {
     //const [mode, setMode] = useContext(ThemeContext);
 
     const links = [
-        { "link":"/","name":"Loading state" },
+        { "link":"/","name":"Posts" },
+        { "link":"/posts2","name":"Posts 2" },
+        { "link":"/todo","name":"To-do" },
     ]
 
     const theme = useContext(ThemeContext);
@@ -20,8 +22,8 @@ export default function Header(props) {
     //const theme = mode ? ' light' : ' dark';
 
   return (<>
-    <Navbar className={"navbar-"+theme.themeMode} expand="lg">
-      <Container className='max-w-7xl mx-auto'>
+    <Navbar className={"navbar-main navbar-"+theme.themeMode} expand="lg">
+      <Container className={"max-w-7xl mx-auto navbar-"+theme.themeMode}>
         <h5 className='m-3 mx-3'>Experiments</h5>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -33,7 +35,7 @@ export default function Header(props) {
                     className={ ({isActive}) => {
                         return (
                             "px-2 p-2 no-underline navbar-"+theme.themeMode+
-                            (isActive ? " font-bold text-blue-500 max-[600px]:bg-blue-100" : " text-black")
+                            (isActive ? " font-bold text-blue-500 max-[600px]:bg-blue-100" : " navbar-"+theme.themeMode)
                         )
                     } }
                     >{x.name}</NavLink>

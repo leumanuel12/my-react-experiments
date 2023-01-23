@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Posts from "./pages/Posts";
 import Header from "./components/Header";
 import { createContext, useReducer, useState } from "react";
+import Posts2 from "./pages/Posts2";
+import TodoList from "./pages/TodoList";
 
 export const ThemeContext = createContext();
 
@@ -25,6 +27,8 @@ function App() {
         <Header>
           <Routes>
             <Route path="/" element={<Posts />} />
+            <Route path="/posts2" element={<Posts2 />} />
+            <Route path="/todo" element={<TodoList />} />
           </Routes>
         </Header>
       </BrowserRouter>

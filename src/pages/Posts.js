@@ -34,27 +34,31 @@ export default function Posts() {
     },[] )
 
     return (
-        <div className="grid md:grid-cols-2 px-4 py-2 gap-4">
-            <div>
-            {post && post.map( post => { return (
-                <div key={post.id} className={"p-4 mb-3 pb-4 border-2 border-gray-200 rounded-md posts-"+theme.themeMode}>
-                    <b>{post.title}</b><br/>
-                    <p className={"body-"+theme.themeMode}>{post.body}</p>
-                </div>
-            ) })  }
-            {!post && [...Array(5)].map( (n) => <Skeleton key={n} template="posts"/> )}
+        <>
+            <div className="p-3 border-2 border-red-500 rounded-md text-red-500">
+                Custom hook fetch api with skeleton implementation.
             </div>
-
-            <div>
-            {users && users.map( user => { return (
-                <div key={user.id} className={"p-4 mb-3 pb-4 border-2 border-gray-200 rounded-md users-"+theme.themeMode}>
-                    <b>{user.name}</b> ({user.email})<br/>
-                    <p className={"body-"+theme.themeMode}>Address: {user.address.street}, {user.address.suite}, {user.address.city}, {user.address.zipcode}</p>
+            <div className="grid md:grid-cols-2 px-4 py-2 gap-4">
+                <div>
+                {post && post.map( post => { return (
+                    <div key={post.id} className={"p-4 mb-3 pb-4 border-2 border-gray-200 rounded-md posts-"+theme.themeMode}>
+                        <b>{post.title}</b><br/>
+                        <p className={"body-"+theme.themeMode}>{post.body}</p>
+                    </div>
+                ) })  }
+                {!post && [...Array(5)].map( (n) => <Skeleton key={n} template="posts"/> )}
                 </div>
-            ) })  }
-            {!users && [...Array(5)].map( (n) => <Skeleton key={n} template="users"/> )}
-            </div>
 
-        </div>
-    );
+                <div>
+                {users && users.map( user => { return (
+                    <div key={user.id} className={"p-4 mb-3 pb-4 border-2 border-gray-200 rounded-md users-"+theme.themeMode}>
+                        <b>{user.name}</b> ({user.email})<br/>
+                        <p className={"body-"+theme.themeMode}>Address: {user.address.street}, {user.address.suite}, {user.address.city}, {user.address.zipcode}</p>
+                    </div>
+                ) })  }
+                {!users && [...Array(5)].map( (n) => <Skeleton key={n} template="users"/> )}
+                </div>
+
+            </div>
+        </>);
 };
