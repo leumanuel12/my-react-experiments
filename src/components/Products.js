@@ -6,6 +6,7 @@ export default function Products() {
   const [search, setSearch] = useState();
 
   useEffect(() => {
+    if(!search) setProducts()
     let items = setTimeout(() => {
         searchitem(search);
     }, 500)
@@ -33,7 +34,8 @@ export default function Products() {
 
   return (
     <div>
-      Search Products API with debounce:
+      Search Products API with debounce:<br/>
+      dummyjson fake API
       <div className="flex justify-center">
         <input
           type="text"

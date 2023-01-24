@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Products from "../components/Products";
+import Throttle from "../components/Throttle";
 
 export default function Debounce() {
   const [search, setSearch] = useState();
@@ -23,8 +24,8 @@ export default function Debounce() {
         Debounce function on search box
       </div>
 
-      <div className="grid md:grid-cols-2 px-4 py-2 gap-4  mt-2">
-        <div className="col-span-1 md:border-r-2 md:border-red-400 min-h-screen">
+      <div className="grid md:grid-cols-3 px-4 py-2 mt-2">
+        <div className="col-span-1 md:border-r md:border-red-400 px-2">
         <span>basic debounce : </span>
             <div className="flex justify-center">
                 <input
@@ -39,8 +40,11 @@ export default function Debounce() {
             </div>
         </div>
         
-        <div className="col-span-1">
+        <div className="col-span-1 md:border-r md:border-red-400 px-2">
             <Products />
+        </div>
+        <div className="col-span-1 px-2">
+            <Throttle />
         </div>
       </div>
 
