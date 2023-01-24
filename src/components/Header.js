@@ -15,6 +15,7 @@ export default function Header(props) {
         { "link":"/","name":"Posts" },
         { "link":"/posts2","name":"Posts 2" },
         { "link":"/todo","name":"To-do" },
+        { "link":"/debounce","name":"Debounce" },
     ]
 
     const theme = useContext(ThemeContext);

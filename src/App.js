@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import { createContext, useReducer, useState } from "react";
 import Posts2 from "./pages/Posts2";
 import TodoList from "./pages/TodoList";
+import Debounce from "./pages/Debounce";
 
 export const ThemeContext = createContext();
 
@@ -29,6 +30,7 @@ function App() {
             <Route path="/" element={<Posts />} />
             <Route path="/posts2" element={<Posts2 />} />
             <Route path="/todo" element={<TodoList />} />
+            <Route path="/debounce" element={<Debounce />} />
           </Routes>
         </Header>
       </BrowserRouter>
